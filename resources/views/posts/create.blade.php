@@ -5,7 +5,7 @@
         <div class="card-header">Create Post</div>
 
         <div class="card-body">
-            <form action="{{ route('posts.store') }}" method="POST">
+            <form action="{{ route('posts.store') }}" method="POST" enctype="multipart/form-data">
                 @csrf
 
                 <div class="form-group">
@@ -37,11 +37,11 @@
                 </div>
 
                 <div class="form-group">
-                    <button tyope="submit" class="btn btn-success">
+                    <button type="submit" class="btn btn-success">
                         Create Post
                     </button>
                 </div>
             </form>
         </div>
     </div>
-@endsection)
+@endsection
