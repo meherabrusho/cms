@@ -144,7 +144,7 @@ class PostsController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function trashed(){
-        $trashed = Post::withTrashed()->get();
+        $trashed = Post::onlyTrashed()->get();
 
         return view('posts.index')->with('posts', $trashed);
     }
