@@ -31,7 +31,7 @@
 
                                 @if(!$post->trashed())
                                     <td>
-                                        <button href="" class="btn btn-info btn-sm">Edit</button>
+                                        <a href="{{ route('posts.edit', $post->id) }}" class="btn btn-info btn-sm">Edit</a>
                                     </td>
                                 @endif
 
